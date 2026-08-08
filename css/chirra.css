@@ -80,6 +80,25 @@
     margin-right: auto;
 }
 
+/* LOCKUP: isotipo + logotipo de Chirra */
+.lockup-chirra{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.lockup-chirra img{
+    align-self: center; /* anula el flex-start heredado de .contenido-chirra img */
+}
+.lockup-chirra .isotipo-chirra{
+    width: 70px;
+    height: auto;
+}
+.lockup-chirra .aplicacion-chirra{
+    width: 230px;
+    height: auto;
+}
+
 /* ATRIBUCIÓN DE PRODUCTO (CHIRRA = ByteSync) */
 .producto-de{
     align-self: flex-start;
@@ -132,6 +151,43 @@
 }
 .titularidad-intro strong{
     font-weight: 700;
+}
+
+/* Emparejamiento visual de las dos marcas */
+.relacion-marcas{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+.app-icon{
+    width: 76px;
+    height: 76px;
+    flex: 0 0 76px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-icon img{
+    width: 100%;
+    height: auto;
+}
+.relacion-texto{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.72);
+}
+.logo-empresa{
+    width: 155px;
+    height: auto;
 }
 
 .datos-empresa{
@@ -195,8 +251,14 @@
         margin-left: 0px;
     }
 
-    .aplicacion-chirra{
-        width: 250px !important;
+    .lockup-chirra{
+        gap: 10px;
+    }
+    .lockup-chirra .isotipo-chirra{
+        width: 54px;
+    }
+    .lockup-chirra .aplicacion-chirra{
+        width: 190px;
     }
 
     .img-chirra-mobile{

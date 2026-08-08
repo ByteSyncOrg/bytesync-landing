@@ -51,12 +51,23 @@
 }
 
 .legal .titular{
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.72);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     padding-bottom: 24px;
     margin-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.legal .titular p{
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 0;
+}
+.isotipo-legal{
+    width: 60px;
+    height: auto;
+    flex: 0 0 60px;
 }
 .legal .titular strong{
     font-weight: 700;
