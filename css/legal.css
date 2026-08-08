@@ -1,0 +1,148 @@
+.banner-head{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/banner-head-servicios.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 70px;
+
+}
+
+.text-degradado{
+    background: linear-gradient(90deg, #fa48c7, #12AAF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback para navegadores que no soportan background-clip: text */
+    display: inline-block;
+    font-weight: 800;
+}
+
+
+/* DOCUMENTO LEGAL */
+.legal{
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: #0e1a40;
+    padding: 24px;
+}
+
+.actualizacion{
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+}
+
+.legal .titular{
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.72);
+    padding-bottom: 24px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.legal .titular strong{
+    font-weight: 700;
+    color: #ffffff;
+}
+.legal .titular a{
+    color: #FA92CC;
+}
+.legal .titular a:hover{
+    color: #ffffff;
+    transition: all .5s;
+}
+
+.legal h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: #94DFFF;
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+.legal p{
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 14px;
+}
+.legal strong{
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.legal ul,
+.legal ol{
+    padding-left: 22px;
+    margin-bottom: 14px;
+}
+.legal li{
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.legal li ul{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.legal a{
+    color: #FA92CC;
+}
+.legal a:hover{
+    color: #ffffff;
+    transition: all .5s;
+}
+
+/* Volver a la página de Chirra */
+.volver-chirra{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.btn-legal{
+    color: #FA92CC;
+    padding: 14px 26px;
+    border-radius: 20px;
+    background-color: #05122c;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-legal:hover{
+    background-color: #010d27;
+}
+
+
+@media (min-width: 700px){
+    .legal{
+        padding: 40px;
+    }
+    .legal h2{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 950px){
+    .banner-head{
+        height: 160px;
+        margin-bottom: 70px;
+    }
+}
