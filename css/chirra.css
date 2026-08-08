@@ -1,0 +1,236 @@
+.banner-head{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/banner-head-servicios.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 70px;
+
+}
+
+.text-degradado{
+    background: linear-gradient(90deg, #fa48c7, #12AAF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback para navegadores que no soportan background-clip: text */
+    display: inline-block;
+    font-weight: 800;
+}
+
+
+/* PRESENTACIÓN DEL PRODUCTO */
+.img-chirra{
+    max-width: 580px;
+}
+.img-chirra img{
+    width: 100%;
+    height: auto;
+}
+
+.info-chirra{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.contenido-chirra{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 480px;
+}
+.contenido-chirra img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start; /* evita estiramiento en flex */
+}
+.contenido-chirra p{
+    line-height: 24px;
+}
+.contenido-chirra strong{
+    font-weight: 700;
+}
+
+.btn-chirra{
+    background-color: #9B227D;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+/* ATRIBUCIÓN DE PRODUCTO (CHIRRA = ByteSync) */
+.producto-de{
+    align-self: flex-start;
+    margin-bottom: -14px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #94DFFF;
+    letter-spacing: 0.5px;
+}
+.producto-de strong{
+    font-weight: 700;
+}
+
+.nota-store{
+    align-self: flex-start;
+    margin-top: -14px;
+    font-size: 13px;
+    line-height: 18px !important;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.72);
+}
+.nota-store strong{
+    font-weight: 700;
+    color: #ffffff;
+}
+.nota-store span{
+    color: #FA92CC;
+}
+
+.img-chirra-mobile{
+   display: none;
+}
+
+
+/* DECLARACIÓN DE TITULARIDAD */
+.titularidad{
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: #0e1a40;
+    padding: 24px;
+    margin-bottom: 60px;
+}
+.titularidad h2{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.titularidad-intro{
+    line-height: 24px;
+    margin-bottom: 28px;
+}
+.titularidad-intro strong{
+    font-weight: 700;
+}
+
+.datos-empresa{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.dato dt{
+    font-size: 14px;
+    font-weight: 700;
+    color: #94DFFF;
+    margin-bottom: 4px;
+}
+.dato dd{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #ffffff;
+}
+.dato dd a{
+    color: #FA92CC;
+}
+.dato dd a:hover{
+    color: #ffffff;
+    transition: all .5s;
+}
+
+.enlaces-legales{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+.btn-legal{
+    color: #FA92CC;
+    padding: 14px 26px;
+    border-radius: 20px;
+    background-color: #05122c;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-legal:hover{
+    background-color: #010d27;
+}
+
+
+@media (max-width: 840px){
+
+    .info-chirra{
+        flex-direction: column;
+    }
+
+    .btn-chirra{
+        padding: 12px 18px;
+        width: 190px;
+    }
+
+    .contenido-chirra{
+        margin-left: 0px;
+    }
+
+    .aplicacion-chirra{
+        width: 250px !important;
+    }
+
+    .img-chirra-mobile{
+        display: block;
+        margin-top: 30px;
+        max-width: 450px;
+    }
+    .img-chirra-mobile img{
+        width: 100%;
+    }
+    .img-chirra{
+        display: none;
+    }
+}
+
+
+@media (min-width: 700px){
+    .datos-empresa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 30px;
+    }
+}
+
+
+@media (min-width: 950px){
+    .banner-head{
+        height: 160px;
+        margin-bottom: 70px;
+    }
+    .titularidad{
+        padding: 40px;
+    }
+    .titularidad h2{
+        font-size: 30px;
+    }
+}
