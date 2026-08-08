@@ -127,7 +127,49 @@ class AppFooter extends HTMLElement {
     text-align: center;
     font-size: 14px;
     color: #235c92;
-} 
+}
+
+/* Datos legales de la empresa bajo el logo */
+.razon-social{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(202, 202, 202);
+}
+.razon-social strong{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Enlaces legales en la franja inferior */
+.legales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 24px;
+    padding: 26px 10px 0px 10px;
+}
+.legales a{
+    font-size: 14px;
+    color: #cc75ff;
+}
+.legales a:hover{
+    color: white;
+    transition: all .5s;
+}
+.legales .separador{
+    font-size: 14px;
+    color: #235c92;
+}
+.down .legales + p{
+    padding-top: 20px;
+}
+
+@media (max-width: 560px){
+    .legales .separador{
+        display: none;
+    }
+}
 
 .redes-sociales-abajo a{
 text-decoration: none;
@@ -177,14 +219,20 @@ height-line: 0px;
         <footer>
         <div class="pie-content">
             <div class="card3"><img class="logito" src="images/logo-bytesync.svg" alt="Bytesync">
-            
-                
+
+                <p class="razon-social">
+                    <strong>BYTESYNC S.A.C.</strong><br>
+                    RUC 20613652753<br>
+                    Mza. D Lote 7 A.H. Villa El Rosario<br>
+                    San Juan de Lurigancho - Lima, Perú
+                </p>
+
         </div>
             
             <div class="card3"><h3>Horario de atención:</h3>
                 <p class="text-pie">Atendendemos de Lunes a Viernes de 8:00AM - 8:00PM .</p></div>
             <div class="card3"><h3>Contáctenos</h3> 
-                <div><p class="text-pie" > <a href="tel:+51915173767"> Cel.: 51+ 915 173 767 </a> </p></div>
+                <div><p class="text-pie" > <a href="tel:+51913174005"> Cel.: +51 913 174 005 </a> </p></div>
             
                 <div> <a class="correos" href="mailto:cotiza@bytesync.com"> cotiza@bytesync.com </a></div>
 
@@ -216,7 +264,14 @@ height-line: 0px;
             </div>
         </div>
         <div class="down">
-            <p>Copyright ©  2025-2026 "ByteSync" Todos los derechos reservados.</p>
+            <nav class="legales">
+                <a href="chirra.html">Chirra</a>
+                <span class="separador">·</span>
+                <a href="politica-privacidad.html">Política de privacidad</a>
+                <span class="separador">·</span>
+                <a href="terminos-condiciones.html">Términos y condiciones</a>
+            </nav>
+            <p>Copyright ©  2025-2026 "ByteSync" Todos los derechos reservados. Chirra es un producto de BYTESYNC S.A.C.</p>
         </div>
     </footer>
       `;
