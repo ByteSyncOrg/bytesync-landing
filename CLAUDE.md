@@ -6,20 +6,26 @@ Sitio estático multipágina (HTML + CSS + JS vanilla). **Sin build, sin npm, si
 
 ```
 landing/
-├── index.html       → css/inicio.css     + js/animations.js
-├── nosotros.html    → css/nosotros.css   + js/animations.js + js/animations-tres.js
-├── servicios.html   → css/servicios.css  + js/animations-cuatro.js
-├── contacto.html    → css/contacto.css   + js/animations.js
+├── index.html                  → css/inicio.css     + js/animations.js
+├── nosotros.html               → css/nosotros.css   + js/animations.js + js/animations-tres.js
+├── servicios.html              → css/servicios.css  + js/animations-cuatro.js
+├── contacto.html               → css/contacto.css   + js/animations.js
+├── chirra.html                 → css/chirra.css     + js/animations.js
+├── politica-privacidad.html    → css/legal.css      + js/animations.js
+├── terminos-condiciones.html   → css/legal.css      + js/animations.js
 ├── css/
-│   ├── styles.css   ← GLOBAL, se carga en las 4 páginas (siempre primero)
-│   └── {inicio,nosotros,servicios,contacto}.css  ← uno por página
+│   ├── styles.css   ← GLOBAL, se carga en todas las páginas (siempre primero)
+│   ├── {inicio,nosotros,servicios,contacto,chirra}.css  ← uno por página
+│   └── legal.css    ← compartida por política de privacidad y términos
 ├── js/
-│   ├── app-header.js / app-footer.js  ← Web Components (Shadow DOM) en las 4 páginas
+│   ├── app-header.js / app-footer.js  ← Web Components (Shadow DOM) en todas las páginas
 │   └── animations*.js
 └── images/          ← todos los assets (png, svg, mp4)
 ```
 
 Orden fijo en cada página: `<link styles.css>` → `<link {pagina}.css>` → GSAP CDN → contenido → `app-header.js`, `app-footer.js`, `animations*.js` al final del `<body>`.
+
+`chirra.html` y las dos páginas legales no están en el menú del header: se llega a ellas desde la sección de CHIRRA en `servicios.html` y desde los enlaces del footer.
 
 ## Sistema visual (RESPETAR SIEMPRE)
 
@@ -101,6 +107,20 @@ GSAP 3.12.5 + ScrollTrigger por CDN (`nosotros.html` carga además MotionPathPlu
 - El `@media (max-width: 950px)` del header (`app-header.js`) queda sin llave de cierre antes de `</style>`.
 - `contacto.html` tiene líneas en blanco antes del `<!DOCTYPE>`.
 - El formulario de contacto no tiene `action` real ni JS de envío.
+
+## Datos de la empresa (deben ser idénticos en todo el sitio)
+
+Meta y Google contrastan estos datos con la documentación del negocio. Si cambia uno, cambiarlo en **todos** los sitios donde aparece.
+
+| Dato | Valor | Dónde aparece |
+|---|---|---|
+| Razón social | BYTESYNC S.A.C. | `chirra.html`, legales, footer |
+| RUC | 20613652753 | `chirra.html`, legales, footer |
+| Domicilio fiscal | Mza. D Lote 7 A.H. Villa El Rosario, San Juan de Lurigancho – Lima, Perú | `chirra.html`, legales, footer, `contacto.html` |
+| Teléfono | +51 913 174 005 | `index.html`, `contacto.html`, footer, `chirra.html` |
+| Dominio oficial | bytesync.pe | `canonical`, JSON-LD, legales |
+| Soporte CHIRRA | soporte.chirra@gmail.com · 980 003 157 | `chirra.html`, política de privacidad |
+| App en Google Play | `bytesync.ionic.chirra` | `chirra.html`, `servicios.html`, JSON-LD |
 
 ## Reglas al editar
 
