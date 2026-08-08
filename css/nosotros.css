@@ -1,0 +1,345 @@
+.banner-head{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(28, 40, 88, 0.678),
+      rgba(163, 24, 114, 0.699),
+      rgba(28, 40, 88, 0.74)
+    ),
+    url("../images/banner-head-servicios.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 70px;
+  
+}
+
+
+
+.text-degradado{
+    background: linear-gradient(90deg, #fa48c7, #12AAF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback para navegadores que no soportan background-clip: text */
+    display: inline-block;
+    font-weight: 800;
+}
+
+
+.servicio .container .head-parraf,
+.servicio .container h1{
+    text-align: center;
+}
+.servicio{
+    margin-bottom: 50px;
+}
+
+
+
+
+
+.context {
+  width: 100%;
+  padding: 80px 0;
+  color: white;
+  margin: 60px 0px !important;
+  background:
+    url("../images/imagen-nosotros-sub.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.texto-franja-medio{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.context .container .parrafo,
+.context .container h1{
+    text-align: center;
+}
+.context{
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+.nosotross{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.mision-img{
+  max-width: 250px;
+  height: auto;
+  min-width: 110px;
+}
+.mision-img img{
+  width: 100%;
+}
+
+.textito{
+  max-width: 700px;
+  font-size: 14px;
+}
+
+
+@media (min-width: 400px){
+  .textito{
+  font-size: 16px;
+}
+
+}
+
+@media (min-width: 700px){
+  .textito{
+  font-size: 16px;
+  padding-right: 150px;
+}
+
+}
+
+@media (min-width: 950px){
+  .banner-head{
+    height: 160px;
+    margin-bottom: 70px;
+  }
+
+}
+
+
+
+
+
+
+
+.articulos-cajas article{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caja-x{
+  border: 1px solid;
+  border-color: white;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  max-width: 650px;
+}
+
+.impar{
+  max-width: 280px;
+  min-width: 130px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.impar img{
+  width: 100%;
+}
+
+
+
+.numeritos{
+  margin-bottom: 60px !important;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 450px){
+  .caja-x{
+    border: 1px solid;
+    border-color: white;
+    border-radius: 12px;
+    padding: 30px 16px !important;
+    max-width: 650px;
+  }
+  .numeritos{
+    height: 300px;
+    margin-bottom: 0px !important;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el path de fondo */
+.p-path-bg {
+  stroke-dasharray: 12 10 !important;
+  stroke-dashoffset: 0 !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Estilo para el path que se dibuja */
+.p-path-fg {
+  stroke-dasharray: 1000 1000; /* Valores iniciales, se sobrescriben por JS */
+  stroke-dashoffset: 1000;
+  filter: drop-shadow(0 4px 8px rgba(255,255,255,0.2));
+}
+
+/* Animación de brillo para el path */
+@keyframes pathGlow {
+  0%, 100% { stroke-opacity: 0.95; }
+  50% { stroke-opacity: 1; }
+}
+
+.p-path-fg {
+  animation: pathGlow 2s ease-in-out infinite;
+}
+
+
+
+
+
+/* === Overlay y prioridad visual === */
+.process-wrap { position: relative; }
+
+.process-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2; /* BAJO: detrá s de las cajas que tendrán z-index más alto */
+  overflow: visible;
+}
+
+/* path y punto dentro del overlay */
+.process-overlay .p-path {
+  stroke: #ffffff;
+  stroke-opacity: 0.95;
+  stroke-width: 4;
+  stroke-dasharray: 12 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,0.6));
+}
+
+.process-overlay .p-dot {
+  fill: #ffeeb3;
+  stroke: rgba(255,255,255,0.9);
+  stroke-width: 1;
+  filter: drop-shadow(0 10px 26px rgba(255,255,255,0.12));
+  opacity: 0; /* aparecerá con GSAP */
+  transform-origin: center center;
+}
+
+/* sube las cajas sobre el overlay */
+.caja-x{
+  position: relative;
+  z-index: 10; /* más alto que overlay para que la línea quede detrás */
+  border-radius: 12px;
+  padding: 1rem;
+  background: #0e1a40;
+   border-color: rgba(255,255,255,0.12) !important;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+
+.caja-x.connected {
+  transform: translateY(-6px);
+    border-color: #ffffff !important;
+  box-shadow: 0 18px 36px rgba(255,255,255,0.08) !important;
+}
+
+/* evita mostrar overlay en muy pantallas chicas si quieres */
+@media (max-width: 800px){
+  .process-overlay { display:none; }
+}
+
+.p-path {
+  stroke: #fff;
+  stroke-opacity: 0.95;
+  stroke-width: 4;
+  stroke-dasharray: 12 10; /* MUY IMPORTANTE: patrón guion/espacio */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+
+.impar img {
+  opacity: 0.8;
+}
+
+
+/* .caja-x {
+  opacity: 0.6;
+} */
+
+
+.p-dot {
+  fill: #fff7d9;
+  stroke: rgba(255,255,255,1);
+  stroke-width: 1.5;
+  animation: dotPulse 1.6s ease-in-out infinite;
+
+  /* 🔥🔥 GLOW POTENTE */
+  filter:
+    drop-shadow(0 0 8px rgba(255,247,217,1))
+    drop-shadow(0 0 18px rgba(255,255,255,0.9))
+    drop-shadow(0 0 32px rgba(255,180,255,0.8))
+    drop-shadow(0 0 48px rgba(255,255,255,0.6));
+
+  opacity: 0;
+  transform-origin: center;
+}
+@keyframes dotPulse {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 10px rgba(255,247,217,1))
+      drop-shadow(0 0 20px rgba(255,255,255,0.9))
+      drop-shadow(0 0 40px rgba(255,180,255,0.8));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 18px rgba(255,247,217,1))
+      drop-shadow(0 0 36px rgba(255,255,255,1))
+      drop-shadow(0 0 60px rgba(255,180,255,1));
+  }
+}
