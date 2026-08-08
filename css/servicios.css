@@ -81,6 +81,39 @@
     margin-right: auto;
 }
 
+/* ATRIBUCIÓN DE PRODUCTO (CHIRRA = ByteSync) */
+.producto-de{
+    align-self: flex-start;
+    margin-bottom: -14px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #94DFFF;
+    letter-spacing: 0.5px;
+}
+.producto-de strong{
+    font-weight: 700;
+}
+
+.nota-store{
+    align-self: flex-start;
+    margin-top: -14px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.72);
+}
+.nota-store strong{
+    font-weight: 700;
+    color: #ffffff;
+}
+.nota-store a{
+    color: #FA92CC;
+}
+.nota-store a:hover{
+    color: #ffffff;
+    transition: all .5s;
+}
+
 .izquier{
     position: absolute;
     left: 0;
